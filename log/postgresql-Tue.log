@@ -1,0 +1,151 @@
+2024-03-12 00:43:07.029 JST [26890] LOG:  received fast shutdown request
+2024-03-12 00:43:07.128 JST [26890] LOG:  aborting any active transactions
+2024-03-12 00:43:07.149 JST [26890] LOG:  background worker "logical replication launcher" (PID 26912) exited with exit code 1
+2024-03-12 00:43:07.150 JST [26893] LOG:  shutting down
+2024-03-12 00:43:07.756 JST [44971] FATAL:  the database system is shutting down
+2024-03-12 00:43:08.116 JST [26893] LOG:  checkpoint starting: shutdown immediate
+2024-03-12 00:43:08.458 JST [26893] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.001 s, total=0.350 s; sync files=0, longest=0.000 s, average=0.000 s; distance=16381 kB, estimate=29655 kB
+2024-03-12 00:43:08.548 JST [26890] LOG:  database system is shut down
+2024-03-12 14:58:39.093 JST [1349] LOG:  starting PostgreSQL 15.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+2024-03-12 14:58:39.098 JST [1349] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-03-12 14:58:39.098 JST [1349] LOG:  listening on IPv6 address "::", port 5432
+2024-03-12 14:58:39.108 JST [1349] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+2024-03-12 14:58:39.121 JST [1349] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-03-12 14:58:39.257 JST [1382] LOG:  database system was shut down at 2024-03-12 00:43:08 JST
+2024-03-12 14:58:39.482 JST [1349] LOG:  database system is ready to accept connections
+2024-03-12 14:58:51.614 JST [1835] LOG:  standby "walreceiver" is now a synchronous standby with priority 1
+2024-03-12 14:58:51.614 JST [1835] STATEMENT:  START_REPLICATION 0/94000000 TIMELINE 8
+2024-03-12 15:03:39.305 JST [1380] LOG:  checkpoint starting: time
+2024-03-12 15:03:39.314 JST [1380] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.002 s, total=0.009 s; sync files=2, longest=0.002 s, average=0.001 s; distance=0 kB, estimate=0 kB
+2024-03-12 16:15:31.975 JST [1380] LOG:  checkpoint starting: force wait
+2024-03-12 16:15:32.333 JST [1380] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.359 s; sync files=0, longest=0.000 s, average=0.000 s; distance=16383 kB, estimate=16383 kB
+2024-03-12 16:24:35.903 JST [5248] LOG:  starting PostgreSQL 15.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+2024-03-12 16:24:35.903 JST [5248] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-03-12 16:24:35.904 JST [5248] LOG:  listening on IPv6 address "::", port 5432
+2024-03-12 16:24:35.906 JST [5248] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+2024-03-12 16:24:35.908 JST [5248] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-03-12 16:24:35.918 JST [5253] LOG:  database system was interrupted; last known up at 2024-03-12 16:15:32 JST
+cp: cannot stat ‘/var/lib/pgsql/15/archivedir/00000009.history’: No such file or directory
+2024-03-12 16:24:35.929 JST [5253] LOG:  starting archive recovery
+2024-03-12 16:24:35.931 JST [5253] LOG:  starting backup recovery with redo LSN 0/95000028, checkpoint LSN 0/95000060, on timeline ID 8
+2024-03-12 16:24:35.933 JST [5253] LOG:  restored log file "00000008.history" from archive
+2024-03-12 16:24:35.970 JST [5253] LOG:  restored log file "000000080000000000000095" from archive
+2024-03-12 16:24:35.996 JST [5253] LOG:  redo starts at 0/95000028
+cp: cannot stat ‘/var/lib/pgsql/15/archivedir/000000080000000000000096’: No such file or directory
+2024-03-12 16:24:36.004 JST [5253] LOG:  completed backup recovery with redo LSN 0/95000028 and end LSN 0/95000138
+2024-03-12 16:24:36.004 JST [5253] LOG:  consistent recovery state reached at 0/95000138
+2024-03-12 16:24:36.004 JST [5248] LOG:  database system is ready to accept read-only connections
+cp: cannot stat ‘/var/lib/pgsql/15/archivedir/000000080000000000000096’: No such file or directory
+2024-03-12 16:24:36.009 JST [5253] LOG:  redo done at 0/95000138 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.01 s
+2024-03-12 16:24:36.075 JST [5253] FATAL:  archive file "000000080000000000000095" has wrong size: 10944512 instead of 16777216
+2024-03-12 16:24:36.076 JST [5248] LOG:  startup process (PID 5253) exited with exit code 1
+2024-03-12 16:24:36.076 JST [5248] LOG:  terminating any other active server processes
+2024-03-12 16:26:31.456 JST [5530] LOG:  starting PostgreSQL 15.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+2024-03-12 16:26:31.457 JST [5530] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-03-12 16:26:31.457 JST [5530] LOG:  listening on IPv6 address "::", port 5432
+2024-03-12 16:26:31.460 JST [5530] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+2024-03-12 16:26:31.461 JST [5530] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-03-12 16:26:31.467 JST [5535] LOG:  database system was interrupted while in recovery at log time 2024-03-12 16:15:31 JST
+2024-03-12 16:26:31.467 JST [5535] HINT:  If this has occurred more than once some data might be corrupted and you might need to choose an earlier recovery target.
+cp: cannot stat ‘/var/lib/pgsql/15/archivedir/00000009.history’: No such file or directory
+2024-03-12 16:26:31.485 JST [5535] LOG:  starting archive recovery
+2024-03-12 16:26:31.490 JST [5535] LOG:  restored log file "00000008.history" from archive
+2024-03-12 16:26:31.517 JST [5535] LOG:  restored log file "000000080000000000000095" from archive
+2024-03-12 16:26:31.549 JST [5535] LOG:  redo starts at 0/95000028
+cp: cannot stat ‘/var/lib/pgsql/15/archivedir/000000080000000000000096’: No such file or directory
+2024-03-12 16:26:31.554 JST [5535] LOG:  consistent recovery state reached at 0/95000138
+2024-03-12 16:26:31.554 JST [5530] LOG:  database system is ready to accept read-only connections
+cp: cannot stat ‘/var/lib/pgsql/15/archivedir/000000080000000000000096’: No such file or directory
+2024-03-12 16:26:31.561 JST [5535] LOG:  redo done at 0/95000138 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.01 s
+2024-03-12 16:26:31.598 JST [5535] LOG:  restored log file "000000080000000000000095" from archive
+cp: cannot stat ‘/var/lib/pgsql/15/archivedir/00000009.history’: No such file or directory
+2024-03-12 16:26:31.660 JST [5535] LOG:  selected new timeline ID: 9
+2024-03-12 16:26:31.739 JST [5535] LOG:  restored log file "00000008.history" from archive
+2024-03-12 16:26:31.740 JST [5535] LOG:  archive recovery complete
+2024-03-12 16:26:31.746 JST [5533] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-03-12 16:26:31.751 JST [5533] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.010 s; sync files=2, longest=0.001 s, average=0.001 s; distance=16384 kB, estimate=16384 kB
+2024-03-12 16:26:31.755 JST [5530] LOG:  database system is ready to accept connections
+2024-03-12 16:26:44.785 JST [5533] LOG:  checkpoint starting: force wait
+2024-03-12 16:26:44.866 JST [5533] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.082 s; sync files=0, longest=0.000 s, average=0.000 s; distance=16384 kB, estimate=16384 kB
+2024-03-12 16:26:44.889 JST [5607] LOG:  standby "pg_basebackup" is now a synchronous standby with priority 1
+2024-03-12 16:26:44.889 JST [5607] STATEMENT:  START_REPLICATION SLOT "pg_basebackup_5607" 0/97000000 TIMELINE 9
+2024-03-12 16:41:10.076 JST [7019] LOG:  starting PostgreSQL 15.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+2024-03-12 16:41:10.076 JST [7019] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-03-12 16:41:10.076 JST [7019] LOG:  listening on IPv6 address "::", port 5432
+2024-03-12 16:41:10.079 JST [7019] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+2024-03-12 16:41:10.081 JST [7019] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-03-12 16:41:10.090 JST [7024] LOG:  database system was interrupted; last known up at 2024-03-12 16:26:44 JST
+2024-03-12 16:41:10.108 JST [7024] LOG:  restored log file "0000000A.history" from archive
+cp: cannot stat ‘/var/lib/pgsql/15/archivedir/0000000B.history’: No such file or directory
+2024-03-12 16:41:10.110 JST [7024] LOG:  starting archive recovery
+2024-03-12 16:41:10.110 JST [7024] LOG:  starting backup recovery with redo LSN 0/97000028, checkpoint LSN 0/97000060, on timeline ID 9
+2024-03-12 16:41:10.115 JST [7024] LOG:  restored log file "0000000A.history" from archive
+2024-03-12 16:41:10.129 JST [7024] LOG:  restored log file "000000090000000000000097" from archive
+2024-03-12 16:41:10.155 JST [7024] LOG:  restored log file "00000009.history" from archive
+2024-03-12 16:41:10.157 JST [7024] LOG:  redo starts at 0/97000028
+2024-03-12 16:41:10.175 JST [7024] LOG:  restored log file "000000090000000000000098" from archive
+2024-03-12 16:41:10.247 JST [7024] LOG:  restored log file "0000000A0000000000000099" from archive
+2024-03-12 16:41:10.274 JST [7024] LOG:  completed backup recovery with redo LSN 0/97000028 and end LSN 0/97000100
+2024-03-12 16:41:10.274 JST [7024] LOG:  consistent recovery state reached at 0/97000100
+2024-03-12 16:41:10.274 JST [7019] LOG:  database system is ready to accept read-only connections
+cp: cannot stat ‘/var/lib/pgsql/15/archivedir/0000000A000000000000009A’: No such file or directory
+cp: cannot stat ‘/var/lib/pgsql/15/archivedir/0000000A000000000000009A’: No such file or directory
+2024-03-12 16:41:10.302 JST [7024] LOG:  redo done at 0/990000D8 system usage: CPU: user: 0.00 s, system: 0.03 s, elapsed: 0.14 s
+2024-03-12 16:41:10.351 JST [7024] LOG:  restored log file "0000000A0000000000000099" from archive
+cp: cannot stat ‘pg_wal/0000000A0000000000000099’: No such file or directory
+2024-03-12 16:41:10.362 JST [7031] LOG:  archive command failed with exit code 1
+2024-03-12 16:41:10.362 JST [7031] DETAIL:  The failed archive command was: cp "pg_wal/0000000A0000000000000099" "/var/lib/pgsql/15/archivedir/0000000A0000000000000099"
+cp: cannot stat ‘/var/lib/pgsql/15/archivedir/0000000B.history’: No such file or directory
+2024-03-12 16:41:10.366 JST [7024] LOG:  selected new timeline ID: 11
+2024-03-12 16:41:10.380 JST [7024] LOG:  restored log file "0000000A.history" from archive
+2024-03-12 16:41:10.381 JST [7024] LOG:  archive recovery complete
+2024-03-12 16:41:10.382 JST [7022] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-03-12 16:41:10.384 JST [7022] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.003 s; sync files=2, longest=0.001 s, average=0.001 s; distance=49152 kB, estimate=49152 kB
+2024-03-12 16:41:10.386 JST [7019] LOG:  database system is ready to accept connections
+2024-03-12 16:43:17.296 JST [7019] LOG:  received fast shutdown request
+2024-03-12 16:43:17.297 JST [7019] LOG:  aborting any active transactions
+2024-03-12 16:43:17.301 JST [7019] LOG:  background worker "logical replication launcher" (PID 7047) exited with exit code 1
+2024-03-12 16:43:17.301 JST [7022] LOG:  shutting down
+2024-03-12 16:43:17.318 JST [7022] LOG:  checkpoint starting: shutdown immediate
+2024-03-12 16:43:17.374 JST [7022] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.062 s; sync files=0, longest=0.000 s, average=0.000 s; distance=16384 kB, estimate=45875 kB
+2024-03-12 16:44:08.918 JST [7358] LOG:  starting PostgreSQL 15.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+2024-03-12 16:44:08.919 JST [7358] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-03-12 16:44:08.919 JST [7358] LOG:  listening on IPv6 address "::", port 5432
+2024-03-12 16:44:08.922 JST [7358] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+2024-03-12 16:44:08.923 JST [7358] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-03-12 16:44:08.926 JST [7363] LOG:  database system was shut down at 2024-03-12 16:43:17 JST
+2024-03-12 16:44:08.931 JST [7358] LOG:  database system is ready to accept connections
+2024-03-12 16:44:11.551 JST [7361] LOG:  checkpoint starting: force wait
+2024-03-12 16:44:11.604 JST [7361] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.053 s; sync files=2, longest=0.001 s, average=0.001 s; distance=16384 kB, estimate=16384 kB
+2024-03-12 16:44:11.635 JST [7413] LOG:  standby "pg_basebackup" is now a synchronous standby with priority 1
+2024-03-12 16:44:11.635 JST [7413] STATEMENT:  START_REPLICATION SLOT "pg_basebackup_7413" 0/9C000000 TIMELINE 11
+2024-03-12 16:44:42.211 JST [7539] LOG:  starting PostgreSQL 15.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+2024-03-12 16:44:42.211 JST [7539] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-03-12 16:44:42.211 JST [7539] LOG:  listening on IPv6 address "::", port 5432
+2024-03-12 16:44:42.212 JST [7539] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+2024-03-12 16:44:42.213 JST [7539] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-03-12 16:44:42.219 JST [7544] LOG:  database system was interrupted; last known up at 2024-03-12 16:44:11 JST
+cp: cannot stat ‘/var/lib/pgsql/15/archivedir/0000000C.history’: No such file or directory
+2024-03-12 16:44:42.244 JST [7544] LOG:  starting archive recovery
+2024-03-12 16:44:42.248 JST [7544] LOG:  starting backup recovery with redo LSN 0/9C000028, checkpoint LSN 0/9C000060, on timeline ID 11
+2024-03-12 16:44:42.252 JST [7544] LOG:  restored log file "0000000B.history" from archive
+2024-03-12 16:44:42.281 JST [7544] LOG:  restored log file "0000000B000000000000009C" from archive
+2024-03-12 16:44:42.305 JST [7544] LOG:  redo starts at 0/9C000028
+cp: cannot stat ‘/var/lib/pgsql/15/archivedir/0000000B000000000000009D’: No such file or directory
+2024-03-12 16:44:42.310 JST [7544] LOG:  completed backup recovery with redo LSN 0/9C000028 and end LSN 0/9C000100
+2024-03-12 16:44:42.310 JST [7544] LOG:  consistent recovery state reached at 0/9C000100
+2024-03-12 16:44:42.310 JST [7539] LOG:  database system is ready to accept read-only connections
+cp: cannot stat ‘/var/lib/pgsql/15/archivedir/0000000B000000000000009D’: No such file or directory
+2024-03-12 16:44:42.313 JST [7544] LOG:  redo done at 0/9C000100 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-03-12 16:44:42.367 JST [7544] LOG:  restored log file "0000000B000000000000009C" from archive
+cp: cannot stat ‘/var/lib/pgsql/15/archivedir/0000000C.history’: No such file or directory
+2024-03-12 16:44:42.411 JST [7544] LOG:  selected new timeline ID: 12
+2024-03-12 16:44:42.441 JST [7544] LOG:  restored log file "0000000B.history" from archive
+2024-03-12 16:44:42.442 JST [7544] LOG:  archive recovery complete
+2024-03-12 16:44:42.447 JST [7542] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-03-12 16:44:42.449 JST [7542] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.007 s; sync files=2, longest=0.001 s, average=0.001 s; distance=16384 kB, estimate=16384 kB
+2024-03-12 16:44:42.451 JST [7539] LOG:  database system is ready to accept connections
+2024-03-12 16:45:50.404 JST [7653] LOG:  standby "walreceiver" is now a synchronous standby with priority 1
+2024-03-12 16:45:50.404 JST [7653] STATEMENT:  START_REPLICATION 0/9D000000 TIMELINE 12
+2024-03-12 16:48:56.836 JST [7542] LOG:  checkpoint starting: force wait
+2024-03-12 16:48:56.897 JST [7542] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.061 s; sync files=0, longest=0.000 s, average=0.000 s; distance=16384 kB, estimate=16384 kB

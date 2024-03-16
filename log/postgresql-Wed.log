@@ -1,0 +1,44 @@
+2024-02-21 00:07:29.930 JST [1226] LOG:  高速シャットダウン要求を受け取りました
+2024-02-21 00:07:29.958 JST [1226] LOG:  活動中の全トランザクションをアボートしています
+2024-02-21 00:07:30.017 JST [1226] LOG:  バックグラウンドワーカー"logical replication launcher" (PID 1254)は終了コード1で終了しました
+2024-02-21 00:07:30.103 JST [1247] LOG:  シャットダウンしています
+2024-02-21 00:07:30.971 JST [7082] FATAL:  データベースシステムはシャットダウンしています
+2024-02-21 00:07:32.162 JST [7122] FATAL:  データベースシステムはシャットダウンしています
+2024-02-21 00:07:32.493 JST [1247] LOG:  チェックポイント開始: shutdown immediate
+2024-02-21 00:07:32.586 JST [1247] LOG:  チェックポイント完了: 0個のバッファを出力 (0.0%); 0個のWALファイルを追加、0個を削除、0個を再利用; 書き出し=0.012秒, 同期=0.001秒, 全体=0.211秒; 同期したファイル=0, 最長=0.000秒, 平均=0.000秒; 距離=16383 kB, 予測=16383 kB
+2024-02-21 00:07:32.903 JST [1226] LOG:  データベースシステムはシャットダウンしました
+2024-03-13 11:25:27.173 JST [73578] LOG:  starting PostgreSQL 15.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+2024-03-13 11:25:27.173 JST [73578] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-03-13 11:25:27.174 JST [73578] LOG:  listening on IPv6 address "::", port 5432
+2024-03-13 11:25:27.175 JST [73578] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+2024-03-13 11:25:27.175 JST [73578] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-03-13 11:25:27.177 JST [73583] LOG:  database system was interrupted; last known up at 2024-03-12 16:48:56 JST
+cp: cannot stat ‘/var/lib/pgsql/15/archivedir/0000000D.history’: No such file or directory
+2024-03-13 11:25:27.185 JST [73583] LOG:  starting archive recovery
+2024-03-13 11:25:27.186 JST [73583] LOG:  starting backup recovery with redo LSN 0/9E000028, checkpoint LSN 0/9E000060, on timeline ID 12
+2024-03-13 11:25:27.187 JST [73583] LOG:  restored log file "0000000C.history" from archive
+2024-03-13 11:25:27.205 JST [73583] LOG:  restored log file "0000000C000000000000009E" from archive
+2024-03-13 11:25:27.233 JST [73583] LOG:  redo starts at 0/9E000028
+cp: cannot stat ‘/var/lib/pgsql/15/archivedir/0000000C000000000000009F’: No such file or directory
+2024-03-13 11:25:27.239 JST [73583] LOG:  completed backup recovery with redo LSN 0/9E000028 and end LSN 0/9E000138
+2024-03-13 11:25:27.239 JST [73583] LOG:  consistent recovery state reached at 0/9E000138
+2024-03-13 11:25:27.239 JST [73578] LOG:  database system is ready to accept read-only connections
+cp: cannot stat ‘/var/lib/pgsql/15/archivedir/0000000C000000000000009F’: No such file or directory
+2024-03-13 11:25:27.242 JST [73583] LOG:  redo done at 0/9E000138 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-03-13 11:25:27.293 JST [73583] LOG:  restored log file "0000000C000000000000009E" from archive
+cp: cannot stat ‘/var/lib/pgsql/15/archivedir/0000000D.history’: No such file or directory
+2024-03-13 11:25:27.373 JST [73583] LOG:  selected new timeline ID: 13
+2024-03-13 11:25:27.439 JST [73583] LOG:  restored log file "0000000C.history" from archive
+2024-03-13 11:25:27.443 JST [73583] LOG:  archive recovery complete
+2024-03-13 11:25:27.446 JST [73581] LOG:  checkpoint starting: end-of-recovery immediate wait
+2024-03-13 11:25:27.449 JST [73581] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.007 s; sync files=2, longest=0.001 s, average=0.001 s; distance=16384 kB, estimate=16384 kB
+2024-03-13 11:25:27.451 JST [73578] LOG:  database system is ready to accept connections
+2024-03-13 11:26:13.714 JST [73679] LOG:  standby "walreceiver" is now a synchronous standby with priority 1
+2024-03-13 11:26:13.714 JST [73679] STATEMENT:  START_REPLICATION 0/9F000000 TIMELINE 13
+2024-03-13 14:20:30.114 JST [73578] LOG:  received fast shutdown request
+2024-03-13 14:20:30.234 JST [73578] LOG:  aborting any active transactions
+2024-03-13 14:20:30.259 JST [73578] LOG:  background worker "logical replication launcher" (PID 73604) exited with exit code 1
+2024-03-13 14:20:30.259 JST [73581] LOG:  shutting down
+2024-03-13 14:20:31.184 JST [73581] LOG:  checkpoint starting: shutdown immediate
+2024-03-13 14:20:31.449 JST [73581] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.007 s, sync=0.001 s, total=0.286 s; sync files=0, longest=0.000 s, average=0.000 s; distance=16384 kB, estimate=16384 kB
+2024-03-13 14:20:31.591 JST [73578] LOG:  database system is shut down
